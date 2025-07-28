@@ -1,0 +1,65 @@
+header{
+  height: 50px;
+  background: linear-gradient(90deg, brown 0%, orange 100%);
+  color: white;
+  line-height: 50px;
+}
+footer{
+  height: 30px;
+  background: linear-gradient(90deg, red 0%, yellow 100%);
+  font-size: 8pt;
+  color: white;
+  line-height: 30px;
+  text-align: center;
+}
+section{
+  height: calc(100% - 80px);
+  overflow: auto;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+nav .logo{
+  font-size: 20pt;
+  font-weight: bold;
+  margin-left: 15px;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+nav ul li{
+  margin: 0 15px;
+}
+nav .menu{
+  margin-right: 15px;
+  font-size: 20pt;
+  display: none;
+}
+/*responsivenes*/
+@media(max-width: 768px){
+  nav .menu{
+    display: block;
+  }
+  nav ul{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+  nav ul.active{
+    display: block;
+  }
+  nav ul li{
+    background: linear-gradient(90deg, orange 0%, brown 100%);
+    padding: 0;
+    margin: 2px 0px 0px 0px;
+  }
+}
